@@ -1,0 +1,306 @@
+:root {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  background-image: url(images/bg-desktop-dark.jpg);
+  background-repeat: no-repeat;
+  background-color: hsl(235, 21%, 11%);
+  transition: all 0.4s;
+}
+
+.container {
+  max-width: calc(50rem + 2.4rem);
+  padding: 1.6rem;
+  margin: auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.todo {
+  position: relative;
+  top: 10%;
+  padding-bottom: 2.4rem;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 3.2rem;
+}
+
+.body-app {
+  font-size: 1.8rem;
+}
+
+.header h1 {
+  font-size: 3.4rem;
+  color: hsl(236, 33%, 92%);
+  letter-spacing: 1.4rem;
+  font-weight: 700;
+}
+
+.input-container {
+  box-shadow: 0px 0px 16px 1px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+}
+
+input#create-todo {
+  font-size: 1.8rem;
+  font-family: "Josefin Sans", sans-serif;
+  background-color: hsl(235, 24%, 19%);
+  position: relative;
+  width: 100%;
+  padding: 1.8rem;
+  border: none;
+  text-indent: 4.8rem;
+  border-radius: 0.4rem;
+  caret-color: hsl(234, 39%, 85%);
+  color: hsl(234, 39%, 85%);
+}
+input#create-todo:focus {
+  outline: none;
+}
+
+figure.image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 1.8rem;
+  z-index: 1;
+  width: 2.6rem;
+  height: 2.6rem;
+  border: 2px solid hsl(237, 14%, 26%);
+  border-radius: 50%;
+}
+
+/* .item .btn-x img:hover, */
+figure.image-container:hover {
+  cursor: pointer;
+  border-color: hsl(280, 87%, 65%);
+}
+
+.item:hover {
+  cursor: move;
+}
+
+.item p:hover {
+  cursor: pointer;
+}
+
+/* .btn-x img{
+  stroke: aquamarine;
+} */
+
+.btn-x img:hover {
+  /* fill: hsl(280, 87%, 65%); */
+  cursor: pointer;
+}
+
+/** TODO LIST  */
+.todo-list {
+  box-shadow: 0px 0px 16px 1px rgba(0, 0, 0, 0.5);
+  margin-top: 2.4rem;
+  background-color: hsl(235, 24%, 19%);
+  color: hsl(234, 39%, 85%);
+  border-radius: 0.4rem;
+
+  display: flex;
+  flex-direction: column;
+  /* gap: 1rem; */
+}
+
+div.list-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* gap: 1.2rem; */
+}
+
+div.list-items .item {
+  /* list-style-type: none; */
+  padding: 1.8rem 2.4rem;
+  display: flex; /* => change with completed {display: flex} */
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid hsl(237, 14%, 26%);
+}
+
+.item p {
+  padding-left: 4.4rem;
+  /* vertical-align: middle; */
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.8rem 1.8rem;
+  font-size: 1.3rem;
+  color: hsl(233, 14%, 35%);
+}
+
+.options .center {
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.options a:link,
+a:visited {
+  color: hsl(233, 14%, 35%);
+  text-decoration: none;
+}
+
+.options a:hover {
+  color: hsl(236, 33%, 92%);
+}
+
+.options .all a {
+  color: hsl(220, 98%, 61%);
+  font-weight: bold;
+}
+
+/*! ─────────────────────────────────────────── */
+/*! HIDDING ICON  */
+/* .todo-list div.list-items .completed {
+} */
+
+.todo-list div.list-items .hidden {
+  display: none;
+}
+
+.image-container img {
+  opacity: 0;
+}
+.completed .image-container img {
+  opacity: 1;
+}
+.completed .image-container {
+  background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+.completed > p {
+  text-decoration: line-through;
+  color: hsl(237, 14%, 26%);
+}
+/* .item p:hover {
+  cursor: pointer;
+} */
+/*! HIDDING ICON  */
+/*! ─────────────────────────────────────────── */
+
+/** ────────────────────────────────────────────────── */
+/** LIGHT MODE */
+/** ────────────────────────────────────────────────── */
+.header img:hover {
+  cursor: pointer;
+}
+
+body.light-mode {
+  background-image: url(images/bg-desktop-light.jpg);
+  background-repeat: no-repeat;
+  background-color: hsl(0, 0%, 98%);
+  transition: all 0.4s;
+}
+
+.light-mode .header h1 {
+  color: hsl(0, 0%, 98%);
+}
+
+.light-mode input#create-todo {
+  caret-color: hsl(235, 19%, 35%);
+  color: hsl(236, 9%, 61%);
+  background-color: hsl(0, 0%, 98%);
+}
+
+.light-mode .todo-list {
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(235, 19%, 35%);
+  /* font-weight: 500; */
+}
+
+.light-mode figure.image-container {
+  border-color: hsl(233, 11%, 84%);
+}
+
+.light-mode div.list-items .item {
+  border-bottom-color: hsl(233, 11%, 84%);
+}
+
+.light-mode .completed > p {
+  /* text-decoration: line-through; */
+  color: hsl(236, 9%, 61%);
+}
+
+.light-mode .options {
+  color: hsl(236, 9%, 61%);
+}
+
+.light-mode .options a:link,
+a:visited {
+  color: hsl(234, 11%, 52%);
+}
+/** LIGHT MODE ───────────────────────────────── end */
+
+@media screen and (max-width: 420px) {
+  .body-app {
+    font-size: 1.6rem;
+  }
+
+  .todo {
+    top: 5%;
+    padding-bottom: 8.4rem;
+  }
+
+  input#create-todo {
+    font-size: 1.6rem;
+  }
+
+  .header h1 {
+    font-size: 2.8rem;
+  }
+  .options {
+    position: relative;
+  }
+  .options .center {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 6.8rem;
+    left: 0rem;
+    background-color: hsl(235, 24%, 19%);
+    box-shadow: 0px 0px 16px 1px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    padding: 1.8rem;
+    border-radius: 0.4rem;
+    transition: all 0.07s;
+    margin-bottom: 7rem;
+  }
+  .light-mode .options .center {
+    background-color: hsl(0, 0%, 98%);
+  }
+}
+
+footer {
+  position: relative;
+  color: hsl(234, 11%, 52%);
+  font-size: 1.4rem;
+  text-align: center;
+  margin-top: 16rem;
+  bottom: 8rem;
+}

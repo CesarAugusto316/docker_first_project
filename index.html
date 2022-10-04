@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Todo app</title>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="main.js"></script>
+  </head>
+  <body class="">
+    <div class="container">
+      <!--! TODO -->
+
+      <div class="todo">
+        <div class="header">
+          <h1>TODO</h1>
+          <img src="images/icon-sun.svg" alt="" />
+        </div>
+
+        <!-- BODY-APP -->
+        <div class="body-app">
+          <!--? INPUT -->
+          <div class="input-container">
+            <figure class="image-container">
+              <img src="images/icon-check.svg" alt="" />
+            </figure>
+
+            <input
+              type="text"
+              name="create-todo"
+              id="create-todo"
+              placeholder="Create a new todo..."
+            />
+          </div>
+
+          <!--? LIST -->
+          <div class="todo-list">
+            <div class="list-items">
+              <!--! HERE $ITEMS ARE APPENDED -->
+            </div>
+
+            <div class="options">
+              <div class="item items-left"><span>0</span> items left</div>
+
+              <div class="center">
+                <div class="all"><a href="#">All</a></div>
+                <div class="active"><a href="#">Active</a></div>
+                <div class="completed"><a href="#">Completed</a></div>
+              </div>
+
+              <div class="clear-completed"><a href="#">Clear Completed</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>Drag and Drop to reorder list</footer>
+    </div>
+  </body>
+</html>
